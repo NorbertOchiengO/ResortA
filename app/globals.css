@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300;1,500&family=Inter:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@custom-variant dark (&:is(.dark *));
+
+:root{--bg:#f6f1e6;--fg:#1d2a24;--card:#fffdf8;--mut:#5f6d65;--bd:#ddd5c0;--sand:#e9efe4}
+.dark{--bg:#0d1b16;--fg:#efe9d8;--card:#13261f;--mut:#9fb0a5;--bd:#24392f;--sand:#10221b}
+@theme inline{
+  --font-sans:'Inter',system-ui,sans-serif;--font-serif:'Cormorant Garamond',Georgia,serif;
+  --color-background:var(--bg);--color-foreground:var(--fg);--color-card:var(--card);--color-muted:var(--mut);--color-border:var(--bd);--color-sand:var(--sand);
+  --color-valley:#183d30;--color-deep:#0d241b;--color-brass:#b99a5f;--color-brass-light:#dfc48c;--color-cream:#f6f1e6;--tracking-luxury:.3em;
+}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{@apply bg-background text-foreground font-sans antialiased overflow-x-hidden}
+h1,h2,h3{@apply font-serif font-light leading-[1]}
+@keyframes drift{0%{opacity:0;transform:translate(0,0)}20%{opacity:.9}100%{opacity:0;transform:translate(36px,-85vh)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
